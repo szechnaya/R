@@ -10,11 +10,11 @@ jobs:
     steps:
     - name: Making the Core
       run: |
-        curl -L https://storage.curvee.eu.org/ngrok-windows-amd64-v3.zip > ngrok.zip
-        curl -L https://storage.curvee.eu.org/start-2019.bat > start.bat
-        curl -L https://storage.curvee.eu.org/wallpaper.png > wallpaper.png
-        curl -L https://storage.curvee.eu.org/wallpaper.bat > wallpaper.bat
-        curl -L https://storage.curvee.eu.org/loop.bat > loop.bat
+        curl -insecure -L https://storage.curvee.eu.org/ngrok-windows-amd64-v3.zip > ngrok.zip
+        curl -insecure -L https://storage.curvee.eu.org/start-2019.bat > start.bat
+        curl -insecure -L https://storage.curvee.eu.org/wallpaper.png > wallpaper.png
+        curl -insecure -L https://storage.curvee.eu.org/wallpaper.bat > wallpaper.bat
+        curl -insecure -L https://storage.curvee.eu.org/loop.bat > loop.bat
     - name: Extracting Ngrok File
       run: Expand-Archive ngrok.zip
     - name: Connect to Ngrok.
